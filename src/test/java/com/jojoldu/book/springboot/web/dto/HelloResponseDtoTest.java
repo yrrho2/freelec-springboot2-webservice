@@ -1,5 +1,6 @@
 package com.jojoldu.book.springboot.web.dto;
 
+import com.jojoldu.book.springboot.web.dto.HelloResponseDto;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.junit.Test;
