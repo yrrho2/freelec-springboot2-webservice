@@ -1,6 +1,8 @@
 var main = {
 
     init : function() {
+        console.log("hello");
+            alert('보여라 시발암');
         var _this = this;
         $('#btn-save').on('click', function () {
             _this.save();

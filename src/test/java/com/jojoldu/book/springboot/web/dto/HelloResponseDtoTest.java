@@ -1,9 +1,12 @@
 package com.jojoldu.book.springboot.web.dto;
 
+import com.jojoldu.book.springboot.comain.posts.Posts;
 import com.jojoldu.book.springboot.web.dto.HelloResponseDto;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.junit.Test;
+
+import java.time.LocalDateTime;
 
 import static org.assertj.core.api.Assertions.assertThat;
 @Getter
@@ -19,4 +22,5 @@ public class HelloResponseDtoTest {
         assertThat(dto.getName()).isEqualTo(name);
         assertThat(dto.getAmount()).isEqualTo(amount);
     }
+
 }

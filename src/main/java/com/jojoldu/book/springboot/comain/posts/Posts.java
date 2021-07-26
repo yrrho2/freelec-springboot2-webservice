@@ -1,5 +1,6 @@
 package com.jojoldu.book.springboot.comain.posts;
 
+import com.jojoldu.book.springboot.comain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,10 +10,10 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     @Column(length = 500, nullable = false)
     private String title;
