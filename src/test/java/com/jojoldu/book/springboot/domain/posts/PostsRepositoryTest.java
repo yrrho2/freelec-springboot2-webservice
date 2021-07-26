@@ -1,7 +1,5 @@
-package com.jojoldu.book.springboot.domain.posts;
+package com.jojoldu.book.springboot.comain.posts;
 
-import com.jojoldu.book.springboot.comain.posts.Posts;
-import com.jojoldu.book.springboot.comain.posts.PostsRepository;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,7 +10,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static com.jojoldu.book.springboot.comain.posts.Posts.builder;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
