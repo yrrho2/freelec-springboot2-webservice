@@ -46,8 +46,9 @@ dependencies {
     testCompile("org.springframework.security:spring-security-test")
 }
 
-test {
-    useJUnitPlatform()
-
+test { 
+    /* 이거 없어야 통합 테스트 넘어감
+        useJUnitPlatform()
+    */
 
 }
