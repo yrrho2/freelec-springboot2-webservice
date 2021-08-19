@@ -1,4 +1,4 @@
-package com.jojoldu.book.springboot.web.dto;
+package com.jojoldu.book.springboot.config.auth.dto;
 
 
 import com.jojoldu.book.springboot.comain.user.Role;

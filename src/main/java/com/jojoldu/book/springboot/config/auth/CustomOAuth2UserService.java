@@ -4,7 +4,7 @@ package com.jojoldu.book.springboot.config.auth;
 import com.jojoldu.book.springboot.comain.user.User;
 import com.jojoldu.book.springboot.comain.user.UserRepository;
 import com.jojoldu.book.springboot.config.auth.dto.SessionUser;
-import com.jojoldu.book.springboot.web.dto.OAuthAttributes;
+import com.jojoldu.book.springboot.config.auth.dto.OAuthAttributes;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
@@ -26,14 +26,17 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
-        OAuth2UserService<OAuth2UserRequest, OAuth2User> delegate= new DefaultOAuth2UserService();
+        OAuth2UserService/*<OAuth2UserRequest, OAuth2User>*/ delegate= new DefaultOAuth2UserService();
         OAuth2User oAuth2User = delegate.loadUser(userRequest);
 
         String registrationId = userRequest
                                 .getClientRegistration().getRegistrationId();
+
         String userNameAttributeName = userRequest
-                                .getClientRegistration().getProviderDetails()
-                                .getUserInfoEndpoint().getUserNameAttributeName();
+                                .getClientRegistration()
+                                .getProviderDetails()
+                                .getUserInfoEndpoint()
+                                .getUserNameAttributeName();
 
         OAuthAttributes attributes = OAuthAttributes
                                     .of(registrationId, userNameAttributeName, oAuth2User.getAttributes());
