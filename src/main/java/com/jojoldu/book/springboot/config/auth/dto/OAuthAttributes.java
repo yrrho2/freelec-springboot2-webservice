@@ -33,7 +33,7 @@ public class OAuthAttributes {
                                     , Map<String, Object> attributes) {
 
         if ("naver".equals(registrationId)) {
-            return ofNaver("Id", attributes);
+            return ofNaver("id", attributes);
         }
 
         return ofGoogle(userNameAttributeName, attributes);
