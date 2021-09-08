@@ -32,7 +32,7 @@ public class OAuthAttributes {
                                     , String userNameAttributeName
                                     , Map<String, Object> attributes) {
 
-        if ("naver".equals(registrationId)||"Naver".equals(registrationId)) {
+        if ("naver".equals(registrationId)) {
             return ofNaver("Id", attributes);
         }
 
